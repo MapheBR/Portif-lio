@@ -105,3 +105,29 @@ document.addEventListener("DOMContentLoaded", function () {
         this.textContent = document.body.classList.contains("dark-theme") ? "☀️" : "🌙";
     });
 });
+// script.js
+
+// Função para ajustar o layout com base no tamanho da tela
+function adjustLayout() {
+    const width = window.innerWidth;
+
+    // Exemplo: Ajustar o tamanho da fonte do título principal
+    const title = document.querySelector('h2');
+    if (width < 768) {
+        title.style.fontSize = '24px'; // Tamanho menor para dispositivos móveis
+    } else {
+        title.style.fontSize = '36px'; // Tamanho padrão para desktop
+    }
+
+    // Exemplo: Ajustar o layout do menu de navegação
+    const nav = document.querySelector('nav ul');
+    if (width < 768) {
+        nav.style.flexDirection = 'column'; // Menu em coluna para dispositivos móveis
+    } else {
+        nav.style.flexDirection = 'row'; // Menu em linha para desktop
+    }
+}
+
+// Executar a função ao carregar a página e ao redimensionar a janela
+window.addEventListener('load', adjustLayout);
+window.addEventListener('resize', adjustLayout);
