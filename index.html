@@ -12,15 +12,6 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#trabalho">Trabalho</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
         <div class="container">
             <div class="profile-container">
                 <img src="foto.jpeg" alt="" class="profile-pic">
@@ -53,14 +44,30 @@
     <section id="habilidades">
         <div class="container">
             <h2>Habilidades</h2>
-            <ul>
-                <li>HTML5 e CSS3 - Estruturação e estilização de páginas</li>
-                <li>JavaScript - Sintaxe Básica e Estruturas</li>
-                <li>Banco de Dados - Introdução ao MySQL</li>
-                <li>Versionamento de Código - Git e GitHub</li>
-                <li>Atendimento ao Cliente - Experiência na i9 - Sistemas</li>
-                <li>Lógica de Programação - Estruturas de repetição e condições</li>
-            </ul>
+         <div class="carrossel">
+            <div class="carrossel-container">
+                <div class="carrossel-item">
+                    <p>HTML5 e CSS3 - Estruturação e estilização de páginas</p>
+                </div>
+                <div class="carrossel-item">
+                    <p>JavaScript - Sintaxe Básica e Estruturas</p>
+                </div>
+                <div class="carrossel-item">
+                    <p>Banco de Dados - Introdução ao MySQL</p>
+                </div>
+                <div class="carrossel-item">
+                    <p>Versionamento de Código - Git e GitHub</p>
+                </div>
+                <div class="carrossel-item">
+                    <p>Atendimento ao Cliente - Experiência na i9 - Sistemas</p>
+                </div>
+                <div class="carrossel-item">
+                    <p>Lógica de Programação - Estruturas de repetição e condições</p>
+                </div>
+            </div>
+            <button class="carrossel-btn prev" onclick="moveCarrossel(-1)">&#10094;</button>
+            <button class="carrossel-btn next" onclick="moveCarrossel(1)">&#10095;</button>
+        </div>
         </div>
     </section>
 
@@ -89,29 +96,22 @@
             <p>Se quiser trocar uma ideia sobre tecnologia, programação ou oportunidades na área, me mande uma mensagem!</p>
             <div class="social-icons">
                 <a href="mailto:email@exemplo.com">
-                    <img src="gmail.png" alt="logo1"  class="logo">
+                    <img src="gmail.png" alt="logo1" class="logo">
                 </a>
                 <a href="https://wa.me/seunumerodetelefone">
                     <img src="whats.png" alt="logo2" class="logo">
                 </a>
+                <a href="https://linkedin.com/in/marcosfeliphe">
+                    <img src="linkedin.png" alt="logo3" class="logo">
+                </a>
+                <a href="https://github.com/marcosfeliphe">
+                    <img src="github.png" alt="logo4" class="logo">
+                </a>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://linkedin.  com/in/marcosfeliphe">
-                    <img src="linkedin.png" alt="Ícone" width="50" height="50">
-                </a>
-                <a href="https://github.com/marcosfeliphe">
-                    <img src="github.png" alt="Ícone" width="50" height="50">
-                </a>
-            </div>
-        </div>
+    <footer>              
     </footer>
-
-    <button id="scroll-top">🔝</button>
     <script src="script.js"></script>
 </body>
 </html>

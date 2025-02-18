@@ -27,18 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle("dark-theme");
     });
 
-    document.getElementById("scroll-top").addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+// Mostrar ou esconder o botão de voltar ao topo
+window.addEventListener('scroll', function() {
+    const scrollTopButton = document.getElementById('scroll-top');
+    if (window.scrollY > 300) { // Mostra o botão após rolar 300px
+        scrollTopButton.classList.add('visible');
+    } else {
+        scrollTopButton.classList.remove('visible');
+    }
+});
 
-    window.addEventListener("scroll", function () {
-        let scrollButton = document.getElementById("scroll-top");
-        if (window.scrollY > 300) {
-            scrollButton.style.display = "block";
-        } else {
-            scrollButton.style.display = "none";
-        }
+// Função para voltar ao topo da página
+document.getElementById('scroll-top').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rola suavemente para o topo
     });
+});
 
     function showAnimatedMessage(message) {
         let msgDiv = document.createElement("div");
